@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <canvas id="game-canvas"></canvas>
+      <div class="ui">
+        <button onclick="registerCanvas(this)">STOP DRAWING</button>
+        <button>START GAME</button>
+        <div id="draw-panel">
+          <button id="draw-border">BORDER</button>
+          <button id="draw-reward">REWARD</button>
+          <button id="draw-start">START</button>
+          <button id="draw-finish">FINISH</button>
+        </div>
+        <div id="settings-panel">
+          <button id="load-brain">LOAD BEST BRAIN</button>
+          <button id="save-brain">SAVE BEST BRAIN</button>
+        </div>
+        <div id="info-panel">
+          <div id="generation-text">Generation: 0</div>
+          <div id="total-score-text">Total Obtainable Score: 0</div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="utils.js"></script>
+    <script src="DrawManager.js"></script>
+    <script src="GameManager.js"></script>
+    <script src="./GameObjects/CarSensor.js"></script>
+    <script src="./GameObjects/Car.js"></script>
+    <script src="./GameObjects/Reward.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
